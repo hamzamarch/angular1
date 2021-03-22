@@ -27,6 +27,12 @@ jobs:
       with:
         load: true
         tags: ghcr.io/hamzamarch/angular
+    - name: Authentication to GHCR
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: hamzamarch
+        password: 3b61be776a8b683504c61da11d3c3c1505557014
     - name: push a container
       run: docker push ghcr.io/hamzamarch/angular
       
