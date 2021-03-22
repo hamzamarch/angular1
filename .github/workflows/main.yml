@@ -27,8 +27,12 @@ jobs:
       with:
         load: true
         tags: ghcr.io/hamzamarch/angular
-        push: true
-        
+    - name: push a container
+      uses: docker/build-push-action@v2.3.0
+      with:
+        push: true   
+        outputs: ghcr.io/hamzamarch
+      
         
       
      
