@@ -31,7 +31,7 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: hamzamarch
+        username: ${{secrets.user}}
         password: ${{secrets.pt}}
     - name: push a container
       run: docker push ghcr.io/hamzamarch/angular
